@@ -9,7 +9,7 @@ while rerun:
     print("Hello and welcome to this quiz about plastic pollution.\n" 
     "It will consist of 10 questions that will test your knowledge and \n" 
     "help you learn more about plastic pollution.")
-
+    #This dictionary contains the questions along with the users options
     ques = {
     "What is the most common plastic waste found in the ocean?":
         "a) Plastic bags b) Plastic straws c) Cigarette butts d) Fishing nets",
@@ -32,7 +32,33 @@ while rerun:
     "Which international agreement aims to reduce plastic waste in the oceans?":
         "a) Paris agreement b) MARPOL Convention c) Antartic Treaty d) Geneva Convention"
 }
+    #Contains the answers to each of the questions above
+    ans = {
+    "What is the most common plastic waste found in the ocean?":
+        "c",
+    "Approximately how many metric tons of plastic enter the worlds oceans each year?":
+        "c",
+    "Which marine animals are most at risk from ingesting plastic debris?":
+        "d",
+    "What is the Great Pacific Garbage Patch?":
+        "c",
+    "Which of the following is NOT a way plastic pollution harms wild life?":
+        "c",
+    "Microplastics are defined as plastic particles smaller than:":
+        "b",
+    "What percentage of seabirds are estimated to have plastic in their stomachs?":
+        "d",
+    "Which human activity contributes most to plastic pollution in oceans?":
+        "b",
+    "What are microplastics?":
+        "b",
+    "Which international agreement aims to reduce plastic waste in the oceans?":
+        "b"
+}
+    
+    
     print(ques)
+    print(ans)
     
     
     
@@ -41,5 +67,4 @@ while rerun:
     
     
     
-    
-    ans=input("Please enter your answer here: ")
+    choice=input("Please enter your answer here: ")
