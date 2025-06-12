@@ -72,11 +72,16 @@ while rerun:
     print(ques)
     print(ans)
     points = 0
-    
-    
-    
-    
-    
-    
-    
     choice=input("Please enter your answer here: ")
+
+    
+    
+    
+    retake = input("Would you like to take the quiz again? Answer with Yes or No: ")
+    while retake not in ["yes", "no", "Yes", "No"]:
+        retake = input("That is an invalid answer. Please answer with 'Yes' or 'No': ")
+    
+    if retake == "yes" or retake == "Yes":
+        rerun = True
+    else:  
+        rerun = False    
