@@ -14,48 +14,57 @@ while rerun:
     
     #This dictionary contains the questions along with the users options
     ques = {
-    "1. What is the most common plastic waste found in the ocean?":
-        "a) Plastic bags b) Plastic straws c) Cigarette butts d) Fishing nets",
-    "2. Approximately how many metric tons of plastic enter the worlds oceans each year?":
-        "a) 800,000 b) 1 million c) 8 million d) 20 million",
-    "3. Which marine animals are most at risk from ingesting plastic debris?":
-        "a) Dolphins b) Sea turtles c) Whales d) All of the above",
-    "4. What is the Great Pacific Garbage Patch?":
-        "a) A new marine species b) An island made of sand c) A large area of floating plastic debris d) A coral reef",
-    "5. Which of the following is NOT a way plastic pollution harms wild life?":
-        "a) Entanglement b) Ingestion of plastic c) Providing shelter d) Chemical contamination",
-    "6. Microplastics are defined as plastic particles smaller than:":
-        "a) 1 meter b) 5 millimeters c) 1 centimeter d) 10 centimeters",
-    "7. What percentage of seabirds are estimated to have plastic in their stomachs?":
-        "a) 5% b) 20% c) 60% d) 90%",
-    "8. Which human activity contributes most to plastic pollution in oceans?":
-        "a) Fishing b) Littering on land c) Oil drilling c) Whale watching",
-    "9. What are microplastics?":
-        "a) Large plastic objects b) Tiny plastic particles formed from the breakdown of larger plastics c) A type of fish d) Natural ocean minerals",
-    "10. Which international agreement aims to reduce plastic waste in the oceans?":
-        "a) Paris agreement b) MARPOL Convention c) Antartic Treaty d) Geneva Convention"
+    1: "What is the most common plastic waste found in the ocean? \n"
+            "a) Plastic bags b) Plastic straws c) Cigarette butts d) Fishing nets",
+    2: 
+        "Approximately how many metric tons of plastic enter the worlds oceans each year? \n"
+            "a) 800,000 b) 1 million c) 8 million d) 20 million",
+    3: 
+        "Which marine animals are most at risk from ingesting plastic debris? \n"
+            "a) Dolphins b) Sea turtles c) Whales d) All of the above",
+    4: 
+        "What is the Great Pacific Garbage Patch? \n"
+            "a) A new marine species b) An island made of sand c) A large area of floating plastic debris d) A coral reef",
+    5: 
+        "Which of the following is NOT a way plastic pollution harms wild life? \n"
+            "a) Entanglement b) Ingestion of plastic c) Providing shelter d) Chemical contamination",
+    6: 
+        "Microplastics are defined as plastic particles smaller than: \n"
+            "a) 1 meter b) 5 millimeters c) 1 centimeter d) 10 centimeters",
+    7: 
+        "What percentage of seabirds are estimated to have plastic in their stomachs? \n"
+            "a) 5% b) 20% c) 60% d) 90%",
+    8: 
+        "Which human activity contributes most to plastic pollution in oceans? \n"
+            "a) Fishing b) Littering on land c) Oil drilling c) Whale watching",
+    9: 
+        "What are microplastics? \n"
+            "a) Large plastic objects b) Tiny plastic particles formed from the breakdown of larger plastics c) A type of fish d) Natural ocean minerals",
+    10: 
+        "Which international agreement aims to reduce plastic waste in the oceans? \n"
+            "a) Paris agreement b) MARPOL Convention c) Antartic Treaty d) Geneva Convention"
 }
     #Contains the answers to each of the questions above
     ans = {
-    "1. What is the most common plastic waste found in the ocean?":
+    1:
         "c",
-    "2. Approximately how many metric tons of plastic enter the worlds oceans each year?":
+    2:
         "c",
-    "3. Which marine animals are most at risk from ingesting plastic debris?":
+    3: 
         "d",
-    "4. What is the Great Pacific Garbage Patch?":
+    4: 
         "c",
-    "5. Which of the following is NOT a way plastic pollution harms wild life?":
+    5: 
         "c",
-    "6. Microplastics are defined as plastic particles smaller than:":
+    6: 
         "b",
-    "7. What percentage of seabirds are estimated to have plastic in their stomachs?":
+    7: 
         "d",
-    "8. Which human activity contributes most to plastic pollution in oceans?":
+    8: 
         "b",
-    "9. What are microplastics?":
+    9: 
         "b",
-    "10. Which international agreement aims to reduce plastic waste in the oceans?":
+    10: 
         "b"
 }
     #The valid options the user can input
