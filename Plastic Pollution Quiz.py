@@ -55,26 +55,16 @@ ques = {
 }
     #Contains the answers to each of the questions above
 ans = {
-    "1.":
-        "C", # Cigarette butts
-    "2.":
-        "C", # 8 million
-    "3.": 
-        "D", # All of the above
-    "4.": 
-        "C", # A large area of floating plastic debris
-    "5.": 
-        "C", # Providing shelter
-    "6.": 
-        "B", # 5 millimeters
-    "7.": 
-        "D", # 90%
-    "8.": 
-        "B", # Littering on land
-    "9.": 
-        "B", # Tiny plastic particles formed from the breakdown of larger plastics
-    "10.": 
-        "B" # MARPOL Convention
+    "1.":"C", # Cigarette butts
+    "2.":"C", # 8 million
+    "3.": "D", # All of the above
+    "4.": "C", # A large area of floating plastic debris
+    "5.": "C", # Providing shelter
+    "6.": "B", # 5 millimeters
+    "7.": "D", # 90%
+    "8.": "B", # Littering on land
+    "9.": "B", # Tiny plastic particles formed from the breakdown of larger plastics
+    "10.": "B" # MARPOL Convention
 }
 
 rerun = True
@@ -91,7 +81,8 @@ while rerun:
     
     #The list of valid options the user can choose from. When an invalid option (not in this list) is input, it isnt accepted.
     valid_ans=['A','B','C','D']
-    
+    valid_num=['1','2','3','4']
+    valid_response=['yes', 'no']
     amount=0
     points = 0
     correct = 0 
@@ -124,25 +115,6 @@ while rerun:
             user_wrong(choice, points)
     
     print(f"Thank you for taking this quiz! You were able to get a total of {points} points, which is {correct} answers correct.")
-    #The code below is responsible for the rerun function located at the top of the code.
-    #The user has the option to either repeat the quiz or end it. 
-    #The code will repeat if the user enters "Yes" and will end if the user enters "No"
-    #Any invalid answers (eg. "hello") will result in the user being asked to enter a valid answer (Yes or no) until they input a valid answer.
-    retake = input("Would you like to take the quiz again? Answer with Yes or No: ")
-    while retake not in ["yes", "no", "Yes", "No"]:
-        retake = input("That is an invalid answer. Please answer with 'Yes' or 'No': ")
-    
-    if retake == "yes" or retake == "Yes":
-        print("Goodluck on your next attempt!")
-        rerun = True
-    else:  
-        rerun = False 
-        print("Goodbye!")   
-
-
-    valid_num=['1','2','3','4']
-    valid_response=['Yes','yes','No','no']
-
     print("Now that you have successfully completed the given questions, you may now submit your own question.")
     user_choice = input("Do you wish to add your own question to the quiz? Answer with 'Yes' or 'No': ")
     user_choice = user_choice.strip().lower()
@@ -150,7 +122,6 @@ while rerun:
         print("That is an invalid answer. Please answer again with either 'Yes' or 'No': ")
         user_choice = input("Do you wish to add your own question to the quiz? Answer with 'Yes' or 'No': ")
         user_choice = user_choice.strip().lower()
-    print(user_choice)
     if user_choice == 'yes':
         user_ques = input("Please enter your selected question: ")
         opt_A = input("Enter option A: ")
@@ -164,13 +135,24 @@ while rerun:
             print("That is an invalid answer. Please select a letter out of A, B, C, or D")
             user_ans = input("Which of the 4 options given is the correct answer? (A, B, C, or D): ")
             user_ans = user_ans.strip().upper()
-        user_choice = input("Do you want to create another question? Answer with 'Yes' or 'No' ")
 
-        new_ques = user_ques + "\n" + opt_A + "\n" + opt_B + "\n" + opt_C + "\n" + opt_D
+        new_ques = user_ques + "\n" + "a) " + opt_A + "\n" + "b) " + opt_B + "\n" + "c) " + opt_C + "\n" + "d) " + opt_D
         new_ans = user_ans
-        print(new_ques)
 
         ques.update({"11.": (new_ques)})
         ans.update({"11.": (new_ans)})
-    else:
-        print("bye")
+    #The code below is responsible for the rerun function located at the top of the code.
+    #The user has the option to either repeat the quiz or end it. 
+    #The code will repeat if the user enters "Yes" and will end if the user enters "No"
+    #Any invalid answers (eg. "hello") will result in the user being asked to enter a valid answer (Yes or no) until they input a valid answer.
+    retake = input("Would you like to take the quiz again? Answer with Yes or No: ")
+    retake = retake.strip().lower()
+    while retake not in valid_response:
+        retake = input("That is an invalid answer. Please answer with 'Yes' or 'No': ")
+        retake = retake.strip().lower()
+    if retake == "yes":
+        print("Goodluck on your next attempt!")
+        rerun = True
+    else:  
+        rerun = False 
+        print("Goodbye!")   
