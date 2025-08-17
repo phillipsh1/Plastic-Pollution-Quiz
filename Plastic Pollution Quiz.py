@@ -1,4 +1,4 @@
-'''Quiz Program on Plastic Pollution by Hunter Phillips'''
+'''Quiz Program on Plastic Pollution by Hunter Phillips 17/08/25'''
 
 #This dictionary contains the questions along with the users options
 ques = {
@@ -53,7 +53,7 @@ ques = {
             "c) Antartic Treaty \n"
             "d) Geneva Convention"
 }
-    #Contains the answers to each of the questions above
+#This dictionary below contains the answers to each of the questions above
 ans = {
     "1.":"C", # Cigarette butts
     "2.":"C", # 8 million
@@ -69,21 +69,21 @@ ans = {
 
 rerun = True
 while rerun:
-#Rerun allows the code to be repeated. This function may be disabled by the user
+#Rerun allows the code to be repeated. This feature may be disabled by the user
 #at the end of the quiz when asked whether they would like to repeat it or not.
-#If the user doesn't want to repeat the quiz, rerun will become false ending the
-#loop.
+#If the user doesn't want to repeat the quiz, rerun will become false, and end the loop.
     
     print("Hello and welcome to this quiz about plastic pollution.\n" 
     "It will consist of 10 questions that will test your knowledge and \n" 
     "help you learn more about plastic pollution. When answering a question, you will be shown a list of possible answers. \n"
     "Once you have chosen the answer you believe is correct, you then enter the answers corresponding letter (a,b,c or d)")
     
-    #The list of valid options the user can choose from. When an invalid option (not in this list) is input, it isnt accepted.
+    #These are my variables. The lists starting with the word "Valid" contain the valid answers/responses the user can give.
+    #Amount, points, and correct, allows the code to add on to the number (0). This allows features, such as the points system to function properly.
     valid_ans=['A','B','C','D']
     valid_num=['1','2','3','4']
     valid_response=['yes', 'no']
-    amount=0
+    amount= 0
     points = 0
     correct = 0 
 
@@ -116,6 +116,7 @@ while rerun:
     
     print(f"Thank you for taking this quiz! You were able to get a total of {points} points, which is {correct} answers correct.")
     print("Now that you have successfully completed the given questions, you may now submit your own question.")
+    #At this point the user has completed the quiz and is given the option to add their own question to the quiz.
     user_choice = input("Do you wish to add your own question to the quiz? Answer with 'Yes' or 'No': ")
     user_choice = user_choice.strip().lower()
     while user_choice not in valid_response:
@@ -123,22 +124,25 @@ while rerun:
         user_choice = input("Do you wish to add your own question to the quiz? Answer with 'Yes' or 'No': ")
         user_choice = user_choice.strip().lower()
     if user_choice == 'yes':
-        user_ques = input("Please enter your selected question: ")
-        opt_A = input("Enter option A: ")
+        user_ques = input("Please enter your selected question: ") #The user must input their desired question
+        opt_A = input("Enter option A: ") #The user must provide all four possible answers for their question
         opt_B = input("Enter option B: ")
         opt_C = input("Enter option C: ")
         opt_D = input("Enter option D: ")
-        user_ans = input("Which of the 4 options given is the correct answer? (A, B, C, or D): ")
+        user_ans = input("Which of the 4 options given is the correct answer? (A, B, C, or D): ") #The correct answer out of the four provided
         user_ans = user_ans.strip().upper()
         print(user_ans)
         while user_ans not in valid_ans:
             print("That is an invalid answer. Please select a letter out of A, B, C, or D")
             user_ans = input("Which of the 4 options given is the correct answer? (A, B, C, or D): ")
             user_ans = user_ans.strip().upper()
-
+        #The line below puts everything the user has given into a single variable.
+        #The question and four options are put into "new_ques" while the answer is "new_ans"
+        #Having them put into two variables allow me to enter them into the two dictionaries
+        #One dictionary contains the questions along with their options and the second dictionary contains the answers to each question
         new_ques = user_ques + "\n" + "a) " + opt_A + "\n" + "b) " + opt_B + "\n" + "c) " + opt_C + "\n" + "d) " + opt_D
         new_ans = user_ans
-
+        #"ques.update" adds the users personal question to the dictionaries, allowing them to be displayed when the user reruns the quiz.
         ques.update({"11.": (new_ques)})
         ans.update({"11.": (new_ans)})
     #The code below is responsible for the rerun function located at the top of the code.
